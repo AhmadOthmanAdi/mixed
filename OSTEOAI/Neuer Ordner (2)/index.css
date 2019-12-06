@@ -1,0 +1,82 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: transparent;
+
+}
+
+
+.Box1 {
+  overflow: hidden;
+  display: block;
+  width: auto;
+  height: auto;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#img1 {   
+  max-width: auto;
+  overflow: hidden;
+  width: auto;
+  height: auto;
+}
+
+.parentitem {
+  max-width: auto;
+  overflow: hidden;
+  background-color: transparent;
+  width: auto;
+  height: auto;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.txtbox {
+  overflow: hidden;
+  display: block;
+}
+
+
+/*save for later/
+#tell {
+	display: block;
+	text-align: center;
+	position: relative;
+	font-family: "Avenir";
+	color: black;
+
+	font-size: 80%;
+	padding-bottom: 4%;
+}
+/**/
+
+.bottompic {
+  overflow: hidden;
+  display: block;
+}
+
+.parentbox {
+  max-width: 50%;
+  overflow: hidden;
+  background-color: transparent;
+  width: auto;
+  height: auto;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#img2 {
+  position: absolute;
+  bottom: 0px;
+  max-width: auto;
+  overflow: hidden;
+  width: auto;
+  height: auto;
+}
