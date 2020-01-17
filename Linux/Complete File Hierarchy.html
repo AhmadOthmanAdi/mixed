@@ -1,0 +1,567 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Complete File Hierarchy </title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	opacity: 0.5;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif; }
+.mono { font-family: Nitti, 'Microsoft YaHei', '微软雅黑', monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, Nitti, 'Microsoft YaHei', '微软雅黑', monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="3801d1e3-5e5a-44fc-9a5b-493613c4f417" class="page sans"><header><div class="page-header-icon undefined"><img class="icon" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2F9t_gJWC32zk%2Fmaxresdefault.jpg&amp;f=1&amp;nofb=1"/></div><h1 class="page-title">Complete File Hierarchy </h1></header><div class="page-body"><p id="0d4dd33e-1a89-4fde-b82c-c82de784d874" class="">
+</p><div id="7d676f47-c2a3-40c6-9f22-e504d0807d81" class="column-list"><div id="889450da-635d-4f32-858d-b7350d05959b" style="width:43.75%" class="column"><h3 id="994afcd0-37bb-4052-8a06-d095711111b9" class="">/bin – grundlegende Systembefehle (für alle Benutzer)</h3></div><div id="b196af32-ace6-41ad-bc60-e16500ba93b6" style="width:56.25%" class="column"><figure id="ffe568e5-c8a6-40f2-b199-9796f1d88ba2" class="image"><a href="Complete%20File%20Hierarchy/Untitled.png"><img style="width:472px" src="Complete%20File%20Hierarchy/Untitled.png"/></a></figure></div></div><p id="790be661-e7f0-4d63-931d-122f50d7bad9" class="">/<mark class="highlight-red">bin </mark>enthält alle Befehle, die sowohl vom Administrator als auch vom Benutzer aufgerufen werden können und auch dann benötigt werden, wenn keine anderen Dateisysteme eingehängt (mounted) sind, zum Beispiel im Single User Mode. Darüber hinaus können auch Skripte, die solche Befehle verwenden, dort abgelegt werden.</p><p id="88382337-8bee-4944-9456-8c5f81d99bb7" class="">Das Verzeichnis /bin darf keine Unterverzeichnisse enthalten. Folgende Programme oder symbolische Links auf die <a href="notion://www.notion.so/wiki/Unix-Kommandos">Unix-Kommandos</a> werden in /bin mindestens benötigt:</p><ul id="8b6f2f82-0b03-4525-b278-3d48f10dab3a" class="toggle"><li><details open=""><summary>bin Specifications </summary><ul id="aad632be-1cbb-4822-986a-d055bb9cba7e" class="bulleted-list"><li><mark class="highlight-red"><strong>cat</strong></mark><strong>:</strong> Dateien aneinanderhängen () und zur <a href="notion://www.notion.so/wiki/Stdout">Standardausgabe (stdout)</a> schreiben<p id="a4846f55-bb96-40fd-9a68-ad81dbb0c7cc" class="">englisch: con<strong>cat</strong>enate</p></li></ul><ul id="d5bd8ffa-c583-42e6-8579-a82a9a8a5db7" class="bulleted-list"><li><mark class="highlight-red"><a href="notion://www.notion.so/wiki/Chgrp"><strong>chgrp</strong></a></mark><strong>:</strong> Ändern der Gruppenzugehörigkeit ()<p id="b015fe45-3eb3-4691-ad9d-e4eeddafd9f3" class="">englisch: <strong>ch</strong>ange <strong>gr</strong>ou<strong>p</strong></p></li></ul><ul id="48b45561-a22e-4267-bb6f-298a4b9f0079" class="bulleted-list"><li><mark class="highlight-red"><a href="notion://www.notion.so/wiki/Chmod"><strong>chmod</strong></a></mark><strong>:</strong> Ändern der <a href="notion://www.notion.so/wiki/Dateizugriffsrechte">Dateizugriffsrechte</a> ()<p id="c30dc08e-cb8f-4f77-8286-8e980900e998" class="">englisch: <strong>ch</strong>ange <strong>mod</strong>e</p></li></ul><ul id="bde811b1-2814-4209-96c4-1a43971b57a1" class="bulleted-list"><li><mark class="highlight-red"><a href="notion://www.notion.so/wiki/Chown_(Unix)"><strong>chown</strong></a></mark><strong>:</strong> Ändern von Besitzer und Gruppenzugehörigkeit ()<p id="82d62d66-d3b3-42a8-ab41-1c422b6ac9d0" class="">englisch: <strong>ch</strong>ange <strong>own</strong>ership</p></li></ul><ul id="5c197ce1-336b-484c-a69e-c0e544f5b938" class="bulleted-list"><li><mark class="highlight-red"><a href="notion://www.notion.so/wiki/Cp_(Unix)"><strong>cp</strong></a></mark><strong>:</strong> Kopieren von Dateien oder Verzeichnissen ()<p id="97d2b2d1-218a-4849-ab93-a7cb611c4289" class="">englisch: <strong>c</strong>o<strong>p</strong>y</p></li></ul><ul id="879b790c-a3d5-4e39-ba00-1c8a763692aa" class="bulleted-list"><li><mark class="highlight-red"><strong>date</strong></mark><strong>:</strong> Zeigen oder Setzen von Systemdatum und Systemzeit</li></ul><ul id="8ad0c551-2802-42b9-8656-967e67eea7bd" class="bulleted-list"><li><mark class="highlight-red"><a href="notion://www.notion.so/wiki/Dd_(Unix)"><strong>dd</strong></a></mark><strong>:</strong> Konvertieren oder Kopieren von Daten ()<p id="470783b9-1eb0-4b84-9360-0e64975cf123" class="">englisch: <strong>d</strong>ump <strong>d</strong>ata</p></li></ul><ul id="6c34be90-22a9-442c-b22e-2846a94ccec1" class="bulleted-list"><li><mark class="highlight-red"><strong>df</strong></mark><strong>:</strong> Zeigen des freien Festplattenplatzes ()<p id="24a5e6c9-7a1e-476f-a44d-cb1da0cae21a" class="">englisch: <strong>d</strong>isk <strong>f</strong>reespace</p></li></ul><ul id="1e77f5e5-82e6-47cb-8cdf-d92251dc4777" class="bulleted-list"><li><mark class="highlight-red"><strong>dmesg</strong></mark><strong>:</strong> Zeigen oder Konfigurieren des <a href="notion://www.notion.so/wiki/Ringpuffer">Ringpuffers</a> des <a href="notion://www.notion.so/wiki/Kernel_(Betriebssystem)">Kernels</a> ()<p id="e53c693a-3d97-4336-b061-52f8b5571a58" class="">englisch: <strong>d</strong>isplay <strong>mes</strong>sa<strong>g</strong>es</p></li></ul><ul id="2dc8d0ab-5630-4203-ab12-40b13d92dd1a" class="bulleted-list"><li><mark class="highlight-red"><a href="notion://www.notion.so/wiki/Echo_(Informatik)"><strong>echo</strong></a></mark><strong>:</strong> Wiedergeben einer Textzeile</li></ul><ul id="18a5824a-7782-4eef-beb9-5e61470e5e66" class="bulleted-list"><li><mark class="highlight-red"><a href="notion://www.notion.so/wiki/False_(Unix)"><strong>false</strong></a></mark><strong>:</strong> Erzeugen eines Fehlerstatuscodes</li></ul><ul id="611790b0-a067-4a5d-8f2d-7fc9ab6a6ff9" class="bulleted-list"><li><mark class="highlight-red"><a href="notion://www.notion.so/wiki/Hostname"><strong>hostname</strong></a></mark><strong>:</strong> Zeigen oder Setzen des aktuellen Rechnernamens</li></ul><ul id="8a367bf0-cee9-4fe9-9f09-8278c9a3c431" class="bulleted-list"><li><mark class="highlight-red"><a href="notion://www.notion.so/wiki/Kill_(Unix)"><strong>kill</strong></a></mark><strong>:</strong> Beenden eines <a href="notion://www.notion.so/wiki/Prozess_(Informatik)">Prozesses</a></li></ul><ul id="ec4b6181-ab6c-4046-9661-e76b09c62438" class="bulleted-list"><li><mark class="highlight-red"><a href="notion://www.notion.so/wiki/Ln_(Unix)"><strong>ln</strong></a></mark><strong>:</strong> Setzen von Verknüpfungen zwischen Dateien ()<p id="d1028bde-982e-4589-9730-530a0199fba2" class="">englisch: <strong>l</strong>i<strong>n</strong>k</p></li></ul><ul id="51ec6d78-a092-4bfc-8ad4-69ecbf536104" class="bulleted-list"><li><mark class="highlight-red"><strong>login</strong></mark><strong>:</strong> Benutzeridentität prüfen und <a href="notion://www.notion.so/wiki/Benutzerschnittstelle">Bedienoberfläche</a> starten</li></ul><ul id="efeedb1a-54d8-4542-a2ba-32644038c741" class="bulleted-list"><li><mark class="highlight-red"><a href="notion://www.notion.so/wiki/Ls_(Unix)"><strong>ls</strong></a></mark><strong>:</strong> Verzeichnisinhalt zeigen ()<p id="4ebb2378-5369-4766-912b-8dd259f98a26" class="">englisch: <strong>l</strong>i<strong>s</strong>t</p></li></ul><ul id="46f9a4a4-9326-4dd8-a485-bd8991113cac" class="bulleted-list"><li><mark class="highlight-red"><strong>mkdir</strong></mark><strong>:</strong> Erstellen eines Verzeichnisses ()<p id="890c6ad1-e72d-4356-973f-0ac272d9bb68" class="">englisch: <strong>m</strong>a<strong>k</strong>e <strong>dir</strong>ectory</p></li></ul><ul id="9a46a66e-15eb-4a83-b0a7-13a4ff18501e" class="bulleted-list"><li><mark class="highlight-red"><strong>mknod</strong></mark><strong>:</strong> Erstellen spezieller Gerätedateien ()<p id="353f27e4-d589-4100-8120-d0475edca78e" class="">englisch: <strong>m</strong>a<strong>k</strong>e <strong>nod</strong>e</p></li></ul><ul id="a0af29ba-5b4c-4633-acda-c777f65e17f2" class="bulleted-list"><li><mark class="highlight-red"><a href="notion://www.notion.so/wiki/More_(Kommandozeilenbefehl)"><strong>more</strong></a></mark><strong>:</strong> Daten seitenweise blätternd zeigen</li></ul><ul id="1023d9ee-4eba-49b0-9d5b-b81aa000f0b3" class="bulleted-list"><li><mark class="highlight-red"><strong>mount</strong></mark><strong>:</strong> <a href="notion://www.notion.so/wiki/Mounten">Einhängen</a> von Dateisystemen</li></ul><ul id="e154b163-33c9-4468-ad9c-64207ec0495b" class="bulleted-list"><li><mark class="highlight-red"><a href="notion://www.notion.so/wiki/Mv_(Unix)"><strong>mv</strong></a></mark><strong>:</strong> Verschieben oder Umbenennen von Dateien ()<p id="4a08d020-90dc-4d94-b931-873235e9e114" class="">englisch: <strong>m</strong>o<strong>v</strong>e</p></li></ul><ul id="7a2f5a3b-cbb8-4ae5-964c-ec618bd19c6e" class="bulleted-list"><li><mark class="highlight-red"><a href="notion://www.notion.so/wiki/Ps_(Unix)"><strong>ps</strong></a></mark><strong>:</strong> Prozessstatus zeigen ()<p id="bc36866c-3c5a-45b1-9366-fef7b7f308c9" class="">englisch: <strong>p</strong>rocess <strong>s</strong>tatus</p></li></ul><ul id="c69f1711-fd6a-4564-97c6-8ec52d40c427" class="bulleted-list"><li><mark class="highlight-red"><a href="notion://www.notion.so/wiki/Pwd_(Unix)"><strong>pwd</strong></a></mark><strong>:</strong> Zeigen des Namens des aktuellen Verzeichnisses ()<p id="3bdb63b9-221c-48f7-893f-8c48d7e82aa6" class="">englisch: <strong>p</strong>rint <strong>w</strong>orking <strong>d</strong>irectory</p></li></ul><ul id="9830b527-ce00-4858-be3e-be5d6e7f8ae5" class="bulleted-list"><li><mark class="highlight-red"><a href="notion://www.notion.so/wiki/Rm_(Unix)"><strong>rm</strong></a></mark><strong>:</strong> Löschen von Dateien oder Verzeichnissen ()<p id="ab27ef30-e231-4771-b09f-33b232b02db4" class="">englisch: <strong>r</strong>e<strong>m</strong>ove</p></li></ul><ul id="2af75a0c-6fb5-412d-9c6d-351122b59072" class="bulleted-list"><li><mark class="highlight-red"><strong>rmdir</strong></mark><strong>:</strong> Löschen leerer Verzeichnisse ()<p id="ba87bff4-41a2-4885-8b17-5b19775b3dd0" class="">englisch: <strong>r</strong>e<strong>m</strong>ove <strong>dir</strong>ectory</p></li></ul><ul id="dbb497da-dcd3-4b7d-823f-c2aff2a92e07" class="bulleted-list"><li><mark class="highlight-red"><a href="notion://www.notion.so/wiki/Sed_(Unix)"><strong>sed</strong></a></mark><strong>:</strong> Editieren von Daten ohne Interaktion ()<p id="669edcaa-99c9-4df1-805b-5c4d569cb062" class="">englisch: <strong>s</strong>tream <strong>ed</strong>itor</p></li></ul><ul id="af55a568-58dc-472f-a354-94c95e625b24" class="bulleted-list"><li><mark class="highlight-red"><a href="notion://www.notion.so/wiki/Bourne-Shell"><strong>sh</strong></a></mark><strong>:</strong> <a href="notion://www.notion.so/wiki/Kommandozeileninterpreter">Kommandozeileninterpreter</a> (). Falls  nicht die originale <a href="notion://www.notion.so/wiki/Bourne-Shell">Bourne-Shell</a> ist, muss  ein <a href="notion://www.notion.so/wiki/Harter_Link">Hard-</a> oder <a href="notion://www.notion.so/wiki/Softlink">Softlink</a> auf die eingesetzte Shell sein.<p id="16bf3cd6-b311-4351-a6bf-b6dca318a6f5" class="">english: <strong>sh</strong>ell</p><p id="9ed5e13f-4ac1-452f-9e59-9c952075071f" class="">sh</p><p id="cd03b549-d813-4479-97f4-b05e0380296d" class="">sh</p></li></ul><ul id="4101938b-74a0-4839-9035-a5c84bf1f444" class="bulleted-list"><li><mark class="highlight-red"><strong>stty</strong></mark><strong>:</strong> Zeigen oder Setzen von Einstellungen eines <a href="notion://www.notion.so/wiki/Terminal_(Computer)">Datenendgerätes</a> ()<p id="6590f79a-64ea-4350-aa90-5a4753e1c987" class="">englisch: <strong>s</strong>et <strong>t</strong>ele<strong>ty</strong>per</p></li></ul><ul id="96f3b411-a7f5-427d-8bc7-6102f6363eff" class="bulleted-list"><li><mark class="highlight-red"><a href="notion://www.notion.so/wiki/Su_(Unix)"><strong>su</strong></a></mark><strong>:</strong> startet eine Bedienoberfläche mit neuer Benutzeridentität ()<p id="696bb1e5-76d3-44e8-a997-86eb5d3a5fd8" class="">englisch: <strong>s</strong>ubstitute <strong>u</strong>ser</p></li></ul><ul id="d0b0eff1-0aa0-4447-a3d2-5320f6adf495" class="bulleted-list"><li><mark class="highlight-red"><strong>sync</strong></mark><strong>:</strong> Schreiben der Inhalte von <a href="notion://www.notion.so/wiki/Puffer_(Informatik)">Datenpuffern</a> auf den Datenträger ()<p id="48451556-df44-49c7-abc7-7642ce3a7c3d" class="">englisch: <strong>sync</strong>hronize</p></li></ul><ul id="06667494-a0c6-4583-bfeb-9709ff7367c7" class="bulleted-list"><li><mark class="highlight-red"><a href="notion://www.notion.so/wiki/True_(Unix)"><strong>true</strong></a></mark><strong>:</strong> Erzeugen eines Erfolgsstatuscodes</li></ul><ul id="18036bfb-fc80-451b-a416-34026f52a004" class="bulleted-list"><li><strong>umount:</strong> <a href="notion://www.notion.so/wiki/Unmounten">Aushängen</a> von Dateisystemen ()<p id="5d25af16-d1fa-42a7-8dd9-1e3250f1d112" class="">englisch: <strong>u</strong>n<strong>mount</strong></p></li></ul><ul id="a457fd72-34f5-4312-99ff-b8ef297338cf" class="bulleted-list"><li><mark class="highlight-red"><a href="notion://www.notion.so/wiki/Uname"><strong>uname</strong></a></mark><strong>:</strong> Zeigen diverser Systeminformationen ()<p id="23a2dc10-9cbf-4d66-b203-95f7f63d71d9" class="">englisch: <strong>U</strong>NIX <strong>name</strong></p></li></ul></details></li></ul><p id="417e5bfb-384a-48f4-a1d0-9b82b490bf1d" class="">Falls benötigt, müssen die folgenden Kommandos (oder auf sie verweisende Verknüpfungen) ebenfalls im /bin-Verzeichnis installiert sein:</p><ul id="eb7060d2-abf2-4a4a-8581-a911ef4716f0" class="bulleted-list"><li><mark class="highlight-red"><a href="notion://www.notion.so/wiki/C-Shell"><strong>csh</strong></a></mark><strong>:</strong> <a href="notion://www.notion.so/wiki/C_(Programmiersprache)">C</a>-ähnlicher Kommandozeileninterpreter ()<p id="0e295acf-5bf1-48d7-91fa-08f5e0ca5de8" class="">englisch: <strong>c</strong>-like <strong>sh</strong>ell</p></li></ul><ul id="1ee0e5fb-de32-4f2b-bf34-10beea7d4897" class="bulleted-list"><li><mark class="highlight-red"><a href="notion://www.notion.so/wiki/Ed_(Texteditor)"><strong>ed</strong></a></mark><strong>:</strong> Editieren von Text ()<p id="0496bc06-7f98-4945-89a2-e6826a543b8a" class="">englisch: <strong>ed</strong>it</p></li></ul><ul id="b049cc53-5ba9-4f96-9181-78074f6f6cb2" class="bulleted-list"><li><mark class="highlight-red"><a href="notion://www.notion.so/wiki/Tar_(EDV)"><strong>tar</strong></a></mark><strong>:</strong> Verwalten von Dateiarchiven ()<p id="a7e4e2ea-0c60-47d2-aa1c-4430b5d0f4e8" class="">englisch: <strong>t</strong>ape <strong>ar</strong>chiver</p></li></ul><ul id="64f6bff5-2eca-468f-a828-56160943e194" class="bulleted-list"><li><mark class="highlight-red"><a href="notion://www.notion.so/wiki/Cpio"><strong>cpio</strong></a></mark><strong>:</strong> Kopieren von Dateien in oder aus Archive(n) ()<p id="487189e9-c751-49fa-a307-a87aaa924687" class="">englisch: <strong>c</strong>o<strong>p</strong>y <strong>i</strong>nput/<strong>o</strong>utput</p></li></ul><ul id="c0d1a5b0-612f-424a-b6dc-98194a3907b4" class="bulleted-list"><li><mark class="highlight-red"><a href="notion://www.notion.so/wiki/Gzip"><strong>gzip</strong></a></mark><strong>:</strong> Komprimieren von Daten ()<p id="0be5f762-3307-4d22-8eb2-7529e1e5c587" class="">englisch: <a href="notion://www.notion.so/wiki/GNU-Projekt"><strong>G</strong></a><a href="notion://www.notion.so/wiki/GNU-Projekt">NU</a> <a href="notion://www.notion.so/wiki/ZIP-Dateiformat"><strong>zip</strong></a></p></li></ul><ul id="56b51e96-2b76-41ae-96a9-fd3b42e17aee" class="bulleted-list"><li><mark class="highlight-red"><a href="notion://www.notion.so/wiki/Gzip"><strong>gunzip</strong></a></mark><strong>:</strong> Dekomprimieren von Daten<p id="904877eb-bb35-4c0f-b2aa-5c1d73dc73de" class="">(meist als Verknüpfung zu gzip)</p></li></ul><ul id="868c88a5-23d4-4f17-b9ec-5b33c7ead3c6" class="bulleted-list"><li><mark class="highlight-red"><strong>zcat</strong></mark><strong>:</strong> Dekomprimieren und zeigen von Daten ()<p id="c14344ec-3a7e-49cc-989d-6e07a6b35fe2" class="">englisch: <strong>z</strong>ipped con<strong>cat</strong>enation</p></li></ul><ul id="3b090b54-8e60-46d6-b9cc-010770499e40" class="bulleted-list"><li><mark class="highlight-red"><a href="notion://www.notion.so/wiki/Netstat"><strong>netstat</strong></a></mark><strong>:</strong> Zeigen von Netzwerkstatusinformationen ()<p id="6e017bae-8dc0-4c86-bac2-8f4fb6fd2d24" class="">englisch: <strong>net</strong>work <strong>stat</strong>us</p><p id="3526d093-b27b-4693-9a93-43d36ce057dd" class="">
+</p></li></ul><ul id="deb61ec8-9126-4875-90ad-c4b5142fd40c" class="bulleted-list"><li><mark class="highlight-red"><a href="notion://www.notion.so/wiki/Ping_(Daten%C3%BCbertragung)"><strong>ping</strong></a></mark><strong>:</strong> Senden und Empfangen von Datenpaketen per <a href="notion://www.notion.so/wiki/Internet_Control_Message_Protocol">ICMP</a></li></ul><p id="80701392-f9f2-4f00-877e-9cb5758831dd" class="">Alle weiteren Kommandos, die zur Wiederherstellung benötigt werden, wie beispielsweise <a href="notion://www.notion.so/wiki/File_Transfer_Protocol">ftp</a>, <a href="notion://www.notion.so/wiki/Trivial_File_Transfer_Protocol">tftp</a> oder diverse Archivierungsprogramme, haben hier ebenfalls ihren Platz.</p><h3 id="818c998b-f809-4608-b606-f0101681a096" class="">/boot – statische Dateien des Bootloaders[<a href="notion://www.notion.so/w/index.php?title=Filesystem_Hierarchy_Standard&amp;veaction=edit&amp;section=5">Bearbeiten</a> | <a href="notion://www.notion.so/w/index.php?title=Filesystem_Hierarchy_Standard&amp;action=edit&amp;section=5">Quelltext bearbeiten</a>]</h3><p id="30296360-807b-42c0-97f8-993a34d3c755" class="">Dieses Verzeichnis enthält alle vom Bootloader für den Bootvorgang benötigten Dateien. Dies beinhaltet z. B. auch gespeicherte <a href="notion://www.notion.so/wiki/Master_Boot_Record">Master Boot Records</a>. Auch der Betriebssystem-Kern muss entweder in diesem Verzeichnis oder im Wurzelverzeichnis abgelegt sein.</p><h3 id="c67e7ef0-dfd2-4b98-af00-6dc42bd698c2" class="">/dev – Gerätedateien[<a href="notion://www.notion.so/w/index.php?title=Filesystem_Hierarchy_Standard&amp;veaction=edit&amp;section=6">Bearbeiten</a> | <a href="notion://www.notion.so/w/index.php?title=Filesystem_Hierarchy_Standard&amp;action=edit&amp;section=6">Quelltext bearbeiten</a>]</h3><p id="57051550-161b-48be-92ee-bf3afd1bb22a" class="">Das Verzeichnis /dev beinhaltet Spezial-Dateien (special file) oder<mark class="highlight-red"> </mark><mark class="highlight-red"><a href="notion://www.notion.so/wiki/Ger%C3%A4tedatei">Gerätedateien</a></mark> (device file). Manche der Gerätedateien müssen manuell angelegt werden. In diesem Fall muss das Verzeichnis den Befehl MAKEDEV bzw. MAKEDEV.local enthalten, der diese Gerätedateien anhand der vorhandenen Hardware anlegen kann.Erwähnenswert sind <a href="notion://www.notion.so/wiki//dev/null">/dev/null</a>, in der geschrieben werden kann, aber alles verworfen wird, <a href="notion://www.notion.so/wiki//dev/zero">/dev/zero</a>, aus der Nullbytes in beliebiger Menge gelesen werden können, und <a href="notion://www.notion.so/wiki//dev/random">/dev/random</a> (bzw. /dev/urandom), welche als Hardware-Zufallsgenerator dient.</p><p id="700aabbd-a6c4-404a-8de5-cd316e12a27b" class=""><a href="notion://www.notion.so/wiki/Udev">udev</a> hat seit Kernel 2.6 <a href="notion://www.notion.so/wiki/Devfs">devfs</a> abgelöst und sorgt nun mittels Konfigurationsdateien (standardmäßig in /etc/udev) im <a href="notion://www.notion.so/wiki/Userspace">Userspace</a> für die automatische Erstellung der Devices in /dev.</p><h3 id="7db2c5f7-0608-47f2-9ebe-907af66dd438" class="">/etc – spezifische Konfigurationsdateien[<a href="notion://www.notion.so/w/index.php?title=Filesystem_Hierarchy_Standard&amp;veaction=edit&amp;section=7">Bearbeiten</a> | <a href="notion://www.notion.so/w/index.php?title=Filesystem_Hierarchy_Standard&amp;action=edit&amp;section=7">Quelltext bearbeiten</a>]</h3><p id="39207078-c8ec-4133-a29e-be6eca9f1ef2" class="">/etc stand ursprünglich für „alles übrige“ (lat. et cetera). Es hat sich dann aber als Konfigurationsverzeichnis etabliert und wird daher auch häufig als „editable text configuration“ interpretiert. Das Verzeichnis /etc und seine Unterverzeichnisse enthalten jede Art von <a href="notion://www.notion.so/wiki/Konfigurationsdatei">Konfigurationsdateien</a>. Diese Dateien müssen statische Dateien sein (s. o.). In diesem Verzeichnis dürfen sich keine Binärdateien befinden.</p><p id="44441848-59ca-4cae-9799-ea4b888f4846" class="">Folgende Unterverzeichnisse können u. a. in /etc vorhanden sein:</p><p id="d1c9e178-3851-4dfe-9ea1-6c304738e836" class="">/etc/optKonfiguration für Programme in /opt: Systemspezifische Konfigurationsdateien für zusätzlich installierte Softwarepakete müssen in diesem Verzeichnis in entsprechenden Unterverzeichnissen installiert werden (/etc/opt/&lt;unterverzeichnis&gt;). Eine Regelung, wie das Verzeichnis /etc/opt aufgeteilt ist, existiert nicht./etc/X11Konfiguration des <a href="notion://www.notion.so/wiki/X_Window_System">X Window Systems</a>, optional: In diesem Verzeichnis werden alle Konfigurationsdateien des X11-Systems abgelegt. Das Verzeichnis beheimatet insbesondere die Dateien Xconfig, xorg.conf und Xmodmap (soweit vorhanden). Wenn ein <a href="notion://www.notion.so/wiki/Window_Manager">Window Manager</a> mehr als eine Konfigurationsdatei besitzt, kann dafür ein eigenes Unterverzeichnis angelegt werden, sonst wird die Konfigurationsdatei direkt im Verzeichnis /etc/X11 mit dem Dateinamen &lt;WindowManager&gt;.wmrc abgespeichert./etc/sgmlKonfiguration für <a href="notion://www.notion.so/wiki/Standard_Generalized_Markup_Language">SGML</a>, optional: In diesem Verzeichnis speichern <a href="notion://www.notion.so/wiki/Standard_Generalized_Markup_Language">SGML</a>-Systeme (soweit vorhanden) grundlegende Konfigurationen ab. Dateien mit der Endung <mark class="highlight-red">.conf </mark>bezeichnen herkömmliche Konfigurationsdateien, Dateien mit der Endung .cat stellen spezielle <a href="notion://www.notion.so/wiki/Dokumenttypdefinition">DTD</a>-Kataloge mit Verweisen auf andere Kataloge bereit./etc/xmlKonfiguration für <a href="notion://www.notion.so/wiki/Extensible_Markup_Language">XML</a>, optional: In diesem Verzeichnis werden Grundeinstellungen von evtl. vorhandenen <a href="notion://www.notion.so/wiki/Extensible_Markup_Language">XML</a>-Systemen installiert. Konfigurationsdateien haben die Dateiendung .conf, ein DTD-Katalog befindet sich in der Datei catalog./etc/mcKonfiguration für <a href="notion://www.notion.so/wiki/Midnight_Commander">Midnight Commander</a>, optional/etc/networkEnthält bei Debian Konfigurationsdateien, die das Netz betreffen</p><p id="53aa9169-0a6a-4043-937d-7bd69532cd78" class="">Allgemein liegen Konfigurationen einzelner Dienste unter /etc/&lt;Dienstname&gt;/ und/oder /etc/&lt;Dienstname&gt;.conf (der LDAP unter dem Debianderivat Ubuntu macht z. B. ohne eindeutige Dateibenennung beides). Bei Daemons fehlt oft dann das abschließende d, der NTP-Server z. B. hat den Prozess ntpd, aber die Konfigurationsdatei /etc/ntp.conf.</p><p id="b88383ce-0722-40a2-878c-9951cebe65c2" class="">Folgende Konfigurationsdateien gehören auf jeden Fall (soweit vorhanden) in /etc:</p><p id="d38f5ce0-3048-405c-a185-7332552083c6" class="">csh.loginsystemweite Initialisierungsdatei für den C-ähnlichen BefehlsinterpreterexportsZugriffsrechte für <a href="notion://www.notion.so/wiki/Network_File_System">NFS</a>-Freigaben<a href="notion://www.notion.so/wiki/Fstab">fstab</a>Tabelle mit statischen Informationen zu einhängbaren Dateisystemenftpusersenthält die Namen der vom <a href="notion://www.notion.so/wiki/File_Transfer_Protocol">ftp</a>-Aufruf auszuschließenden Benutzergatewaysstatische Informationen zu den im <a href="notion://www.notion.so/wiki/Netzwerk">Netzwerk</a> verfügbaren <a href="notion://www.notion.so/wiki/Gateway_(Informatik)">Gateways</a>gettydefsParameter zur <a href="notion://www.notion.so/wiki/%C3%9Cbertragungsgeschwindigkeit">Übertragungsgeschwindigkeit</a> und sonstigen Einstellungen der Terminalsgroupzeilenweise Informationen zu den eingetragenen Benutzergruppenhost.confKonfigurationsdaten zur <a href="notion://www.notion.so/wiki/Domain_Name_System#Resolver">Namensauflösung</a><a href="notion://www.notion.so/wiki/Hosts_(Datei)">hosts</a>statische Informationen zur Zuordnung von Rechnernamen zu <a href="notion://www.notion.so/wiki/IP-Adresse">IP-Adressen</a>hosts.allowZugriffsberechtigungen für den <a href="notion://www.notion.so/wiki/TCP-Wrapper">TCP-Wrapper</a> tcpdhosts.denyAusschlusskriterien für den <a href="notion://www.notion.so/wiki/TCP-Wrapper">TCP-Wrapper</a> tcpdhosts.equivzugelassene Rechner für <a href="notion://www.notion.so/wiki/Remote_login">rlogin</a>, <a href="notion://www.notion.so/wiki/Remote_Shell">rsh</a>, <a href="notion://www.notion.so/w/index.php?title=Remote_Copy&amp;action=edit&amp;redlink=1">rcp</a>hosts.lpdzugelassene Rechner für den Druckdienst <a href="notion://www.notion.so/wiki/LPD-Protokoll">lpd</a>inetd.confKonfigurationsdatei für den Internet-<a href="notion://www.notion.so/wiki/Superserver">Superserver</a> <a href="notion://www.notion.so/wiki/Inetd">inetd</a>inittabKonfigurationsdatei für den Initialisierungsprozess <a href="notion://www.notion.so/wiki/Init">init</a>issueSystemidentifikationsdatei zur Ausgabe von Informationen vor dem Anmeldevorgangissue.netSystemidentifikationsdatei zur Ausgabe von Informationen vor dem Anmeldevorgang über das Netzwerk (zum Beispiel <a href="notion://www.notion.so/wiki/Telnet">telnet</a>)ld.so.confListe von Verzeichnissen mit dynamisch einzubindenden BibliothekenmotdMitteilung des Tages zur Ausgabe nach dem Anmeldevorgang (<strong>m</strong>essage <strong>o</strong>f <strong>t</strong>he <strong>d</strong>ay)mtabdynamisch erzeugte Informationen zu den eingehängten Dateisystemenmtools.confKonfigurationsdatei für <a href="notion://www.notion.so/w/index.php?title=Mtools&amp;action=edit&amp;redlink=1">mtools</a>dem Befehl zur Bearbeitung von <a href="notion://www.notion.so/wiki/MS-DOS">MS-DOS</a>-Dateisystemennetworksstatische Informationen zu den verfügbaren NetzwerkenpasswdEnthält den Benutzernamen, Beschreibung des Benutzers, Gruppen-ID, Benutzer-ID, das Heimat-Verzeichnis und das Login-Kommando (meist eine Shell). Früher enthielt diese Datei auch das Benutzerkennwort. Dieses ist jetzt in /etc/shadow gespeichert.printcapKonfigurationsdatei für den Druckdienst <a href="notion://www.notion.so/wiki/LPD-Protokoll">lpd</a>profilesystemweite Konfigurationsdatei für den Anmeldevorgang mittels <a href="notion://www.notion.so/wiki/Bourne-Shell">sh</a>protocolsListe der <a href="notion://www.notion.so/wiki/Internet_Protocol">IP</a>-Protokollkennungen und -<a href="notion://www.notion.so/wiki/Protokoll_(IP)">nummern</a>resolv.confKonfigurationsdatei für die <a href="notion://www.notion.so/wiki/Domain_Name_System#Resolver">Namensauflösung</a>rpcListe der <a href="notion://www.notion.so/wiki/Remote_Procedure_Call">RPC</a>-ProtokollkennungensecurettyZugangsberechtigungen für entfernte AnmeldevorgängeservicesListe der <a href="notion://www.notion.so/wiki/Port_(Protokoll)">Portkennungen</a> für einzelne Diensteshadowverschlüsselte Kennwörter der Benutzer sowie die Dauer der Gültigkeitshellsvollständige Namen der zulässigen Befehlsinterpretersyslog.confKonfigurationsdatei für den Systemprotokollservice <a href="notion://www.notion.so/w/index.php?title=Syslogd&amp;action=edit&amp;redlink=1">syslogd</a></p><h3 id="499c3adc-09cc-4777-a3af-21af758d6405" class="">/home – Benutzerverzeichnisse, optional[<a href="notion://www.notion.so/w/index.php?title=Filesystem_Hierarchy_Standard&amp;veaction=edit&amp;section=8">Bearbeiten</a> | <a href="notion://www.notion.so/w/index.php?title=Filesystem_Hierarchy_Standard&amp;action=edit&amp;section=8">Quelltext bearbeiten</a>]</h3><p id="defa3c03-f582-4e65-a836-523a56f6c5d2" class="">Diese Verzeichnisstruktur dient zur Aufnahme der benutzerspezifischen Daten der einzelnen Benutzer des Systems. Der FHS führt dieses Verzeichnis, obwohl es als Quasi-Standard etabliert ist, nur als optional auf. Alle Benutzer-spezifischen <a href="notion://www.notion.so/wiki/Konfigurationsdatei">Konfigurationsdateien</a> werden in <a href="notion://www.notion.so/wiki/Versteckte_Datei">versteckten Dateien</a> und Verzeichnissen (die einen Punkt als erstes Zeichen des Dateinamens besitzen) unter /home/$USER/ abgelegt. Diese versteckten Dateien und Verzeichnisse im Benutzerverzeichnis werden oft auch &quot;dot files&quot; genannt.</p><h3 id="12de7cdf-76f9-487d-a8c9-0ec940c1c437" class="">/lib – Kernel-Module und dynamische Bibliotheken[<a href="notion://www.notion.so/w/index.php?title=Filesystem_Hierarchy_Standard&amp;veaction=edit&amp;section=9">Bearbeiten</a> | <a href="notion://www.notion.so/w/index.php?title=Filesystem_Hierarchy_Standard&amp;action=edit&amp;section=9">Quelltext bearbeiten</a>]</h3><p id="2dfb98a0-685d-4c6c-af74-345bd712c21f" class="">Das Verzeichnis /lib beinhaltet die installierten <a href="notion://www.notion.so/wiki/Programmbibliothek">dynamischen Bibliotheken</a> und <a href="notion://www.notion.so/wiki/Kernel-Modul">Kernel-Module</a>, die zum Starten des Systems und für die Programme in /bin und /sbin benötigt werden. Hier befindet sich auch die dynamische <a href="notion://www.notion.so/wiki/C-Standard-Bibliothek">C-Standard-Bibliothek</a> libc.so.* und die <a href="notion://www.notion.so/wiki/Linker_(Computerprogramm)">Linker</a>-Bibliothek ld*. Das Unterverzeichnis modules beinhaltet die oben genannten Kernel-Module, falls diese installiert sind.</p><h3 id="af4a12da-d8f6-4d39-904c-12aff3361436" class="">/lib&lt;nr&gt; – Alternative Kernel-Module und dynamische Bibliotheken[<a href="notion://www.notion.so/w/index.php?title=Filesystem_Hierarchy_Standard&amp;veaction=edit&amp;section=10">Bearbeiten</a> | <a href="notion://www.notion.so/w/index.php?title=Filesystem_Hierarchy_Standard&amp;action=edit&amp;section=10">Quelltext bearbeiten</a>]</h3><p id="e1808cce-9586-42f7-8ecc-a374a6d698ff" class="">Manche Systeme unterstützen mehrere Binärformate (für unterschiedliche Prozessor-Architekturen bzw. -modi), für die jeweils eigene Versionen derselben Bibliothek vorhanden sind. Dann gibt es beispielsweise /lib32 und /lib64 für die beiden Betriebsmodi (32 Bit und 64 Bit) des x86-Prozessors.</p><h3 id="9a2ca0d4-98c7-4bd0-a0fa-62fffe033c1a" class="">/media – Einhängepunkte für Wechseldatenträger[<a href="notion://www.notion.so/w/index.php?title=Filesystem_Hierarchy_Standard&amp;veaction=edit&amp;section=11">Bearbeiten</a> | <a href="notion://www.notion.so/w/index.php?title=Filesystem_Hierarchy_Standard&amp;action=edit&amp;section=11">Quelltext bearbeiten</a>]</h3><p id="a44cf95b-4d1b-42fa-ad1e-785762458068" class="">Die einzelnen Unterverzeichnisse in /media dienen als Einhängepunkt für jede Art von Wechseldatenträger. Früher wurden Wechseldatenträger entweder direkt im Wurzelverzeichnis oder im Verzeichnis /mnt <a href="notion://www.notion.so/wiki/Mounten">gemountet</a>. Zur Verschlankung des Wurzelverzeichnisses wurden die Verzeichnisse in den Ordner /media verschoben. Der Standard sieht folgende Unterverzeichnisse jeweils optional vor:</p><p id="10de0407-fa97-45c0-8511-4b15e1cdbf35" class="">/media/floppy<a href="notion://www.notion.so/wiki/Diskette">Diskette</a>/media/cdrom<a href="notion://www.notion.so/wiki/CD-ROM">CD-ROM</a>/media/cdrecorder<a href="notion://www.notion.so/wiki/CD-Brenner">CD-Brenner</a>/media/zip<a href="notion://www.notion.so/wiki/Iomega_Zip">Zip-Laufwerk</a></p><p id="7d4403d5-dbb1-4839-8a1a-ef1fc97bd4e1" class="">Falls ein Gerät mehrmals vorhanden ist, wird das Anhängen einer Ziffer an den Gerätetyp vorgeschlagen.</p><h3 id="1f0d0942-c1a6-4f90-bcd2-db9e0f874286" class="">/mnt – temporäre Einhängepunkte für Dateisysteme[<a href="notion://www.notion.so/w/index.php?title=Filesystem_Hierarchy_Standard&amp;veaction=edit&amp;section=12">Bearbeiten</a> | <a href="notion://www.notion.so/w/index.php?title=Filesystem_Hierarchy_Standard&amp;action=edit&amp;section=12">Quelltext bearbeiten</a>]</h3><p id="40d10917-7f04-431c-a7de-650d6c5ca355" class="">Das Verzeichnis dient zum kurzzeitigen Einhängen von Fremd-Dateisystemen aller Art. Installationsprogrammen ist die Verwendung des Verzeichnisses /mnt für temporäre Dateien ausdrücklich untersagt.</p><h3 id="98054c57-1d33-49f0-bffe-d14046736f31" class="">/opt – zusätzliche Softwarepakete[<a href="notion://www.notion.so/w/index.php?title=Filesystem_Hierarchy_Standard&amp;veaction=edit&amp;section=13">Bearbeiten</a> | <a href="notion://www.notion.so/w/index.php?title=Filesystem_Hierarchy_Standard&amp;action=edit&amp;section=13">Quelltext bearbeiten</a>]</h3><p id="f6b0afe5-dcb5-4330-a1a5-fb8dfff8063c" class="">Das Verzeichnis ist für sämtliche optionale, d. h. zusätzlich installierte, Software vorgesehen, welche nicht aus zur Distribution gehörenden Paketquellen stammen. Die Pakete müssen in einem Unterverzeichnis mit Namen /opt/&lt;Paket&gt; oder /opt/&lt;Hersteller&gt; installiert werden, wobei &lt;Paket&gt; ein beschreibender Paketname ist und &lt;Hersteller&gt; der bei der <a href="notion://www.notion.so/wiki/LANANA">LANANA</a> registrierte Name des Herstellers ist. Die Unterverzeichnisse /opt/bin, /opt/doc, /opt/include, /opt/info, /opt/lib, und /opt/man sind für den lokalen Systemadministrator reserviert. Binärdateien von Softwarepaketen finden sich normalerweise ausschließlich in /opt/&lt;Paket&gt;/bin </p><h3 id="a90a379c-2449-472f-84e0-dd1491f76e33" class="">/root – Benutzerverzeichnis für Benutzer root, optional[<a href="notion://www.notion.so/w/index.php?title=Filesystem_Hierarchy_Standard&amp;veaction=edit&amp;section=14">Bearbeiten</a> | <a href="notion://www.notion.so/w/index.php?title=Filesystem_Hierarchy_Standard&amp;action=edit&amp;section=14">Quelltext bearbeiten</a>]</h3><p id="3b1bb559-248c-4432-92cc-85d36f7d43b8" class="">Das Verzeichnis kann das Benutzerverzeichnis für den Benutzer root bilden. Dieses Verzeichnis ist nur eine Empfehlung des FHS.</p><h3 id="86abcbfd-be80-4b42-9625-60a26971d9b9" class="">/run-Verzeichnis[<a href="notion://www.notion.so/w/index.php?title=Filesystem_Hierarchy_Standard&amp;veaction=edit&amp;section=15">Bearbeiten</a> | <a href="notion://www.notion.so/w/index.php?title=Filesystem_Hierarchy_Standard&amp;action=edit&amp;section=15">Quelltext bearbeiten</a>]</h3><p id="08758d88-4da2-49ea-be20-776497147c00" class="">Ende März 2011 wurde durch Entwickler der <a href="notion://www.notion.so/wiki/Linux-Distribution">Linux-Distribution</a> <a href="notion://www.notion.so/wiki/Fedora_(Linux-Distribution)">Fedora</a> verkündet, dass zukünftige Fedora-Versionen das Verzeichnis /run enthalten werden.<a href="notion://www.notion.so/FHS-d6989c088b5a41408b3f4f1d3ff38d1a?p=3801d1e35e5a44fc9a5b493613c4f417&amp;showMoveTo=true&amp;saveParent=true#cite_note-10">[10]</a><a href="notion://www.notion.so/FHS-d6989c088b5a41408b3f4f1d3ff38d1a?p=3801d1e35e5a44fc9a5b493613c4f417&amp;showMoveTo=true&amp;saveParent=true#cite_note-11">[11]</a> Dieses soll in seiner Funktion das Verzeichnis /var/run ersetzen und das Problem lösen, dass beim Bootvorgang /var/run unter bestimmten Umständen noch nicht verfügbar ist, aber zum Booten benötigt wird. Mehrere Linux-Distributionen sagten ihre Unterstützung zu. /run wird mittlerweile auch vom Filesystem Hierarchy Standard verlangt.</p><h3 id="8afd3302-123c-4620-981f-55d1867a223b" class="">/sbin – wichtige Systembefehle[<a href="notion://www.notion.so/w/index.php?title=Filesystem_Hierarchy_Standard&amp;veaction=edit&amp;section=16">Bearbeiten</a> | <a href="notion://www.notion.so/w/index.php?title=Filesystem_Hierarchy_Standard&amp;action=edit&amp;section=16">Quelltext bearbeiten</a>]</h3><p id="f23efd2d-671e-4aa5-a63e-f2da431e1032" class="">Das Verzeichnis beinhaltet Befehle für die Systemadministration und andere Aufgaben, die nur der Benutzer root ausführen darf. Dies sind im Wesentlichen alle Befehle, die auch im Verzeichnis /bin hätten abgelegt werden können, aber z. B. aus Speicherplatzgründen nicht dort liegen. Programme, die in /sbin erwartet werden: shutdown, fastboot, fasthalt, fdisk, fsck, fsck.*, getty, halt, ifconfig, init, mkfs, mkfs.*, mkswap, reboot, route, swapon, swapoff, update</p><h3 id="9d39611a-4da7-4a30-89f7-a07e50785ec6" class="">/srv – Daten, die von Diensten angeboten werden[<a href="notion://www.notion.so/w/index.php?title=Filesystem_Hierarchy_Standard&amp;veaction=edit&amp;section=17">Bearbeiten</a> | <a href="notion://www.notion.so/w/index.php?title=Filesystem_Hierarchy_Standard&amp;action=edit&amp;section=17">Quelltext bearbeiten</a>]</h3><p id="88c11545-0182-40c4-b81a-73ece56a1550" class="">In diesem Verzeichnis sollen die Daten zu angebotenen Diensten abgelegt werden. Momentan gibt es noch keine Vorschriften darüber, wie die Verzeichnisstruktur in /srv auszusehen hat. Eine vorgeschlagene Möglichkeit ist die Benennung der Unterverzeichnisse nach dem Dienst, also z. B. www, ftp, mysql usw. Eine andere Möglichkeit ist die Ordnung nach Verwaltungseinheiten wie beispielsweise Fachschaften an Universitäten. Dieses wird momentan nur von SuSE und Arch Linux so gemacht. So existiert beispielsweise unter Debian das Verzeichnis /var/www, hingegen wird bei SuSE /srv/www (Arch: /srv/http) verwendet.</p><h3 id="d3df8ee2-a36e-4f06-b7c1-ca5d98746591" class="">/tmp – temporäre Dateien[<a href="notion://www.notion.so/w/index.php?title=Filesystem_Hierarchy_Standard&amp;veaction=edit&amp;section=18">Bearbeiten</a> | <a href="notion://www.notion.so/w/index.php?title=Filesystem_Hierarchy_Standard&amp;action=edit&amp;section=18">Quelltext bearbeiten</a>]</h3><p id="64aaa43a-c3ea-4512-a9b3-b21f3cd9f790" class="">Dieses Verzeichnis muss vorhanden sein, weil es Programme gibt, die ihre <a href="notion://www.notion.so/wiki/Tempor%C3%A4re_Datei">temporären Dateien</a> in diesem Verzeichnis ablegen. Im FHS wurde dieses Verzeichnis vor allem auch wegen seiner historischen Bedeutung aufgenommen. Das Verzeichnis ist für alle Benutzer zum Schreiben freigegeben und muss ein <a href="notion://www.notion.so/wiki/Sticky_Bit">Sticky Bit</a> haben.</p><h3 id="41f1ef77-4827-42db-bf87-0cac10c4a32d" class="">/usr-Verzeichnisstruktur[<a href="notion://www.notion.so/w/index.php?title=Filesystem_Hierarchy_Standard&amp;veaction=edit&amp;section=19">Bearbeiten</a> | <a href="notion://www.notion.so/w/index.php?title=Filesystem_Hierarchy_Standard&amp;action=edit&amp;section=19">Quelltext bearbeiten</a>]</h3><p id="e6dc8ae6-8d4c-451e-b274-fa131d40f15d" class="">/usr (engl.: <strong>U</strong>nix <strong>S</strong>ystem <strong>R</strong>esources, ursprünglich: <strong>US</strong>e<strong>R</strong>) ist die zweite wichtige Ebene des Dateisystems. Dieser Bereich kann von mehreren Rechnern gemeinsam verwendet werden (shareable) und enthält dementsprechend keine vom lokalen Rechner abhängigen oder zeitlich variable Inhalte. Diese werden an anderen Stellen des Dateisystems hinterlegt.</p><p id="f0a43058-9450-4799-a91c-1eeecf1a9852" class="">Folgende Verzeichnisse müssen in /usr vorhanden sein:</p><p id="e2c31813-2614-47a5-a572-f4d50d80a480" class="">/usr/binviele BenutzerbefehleDies ist das primäre Verzeichnis für ausführbare Dateien des Systems./usr/includeHeader-Dateien, werden durch Programme eingebundenDie Header-Dateien enthalten die verschiedenen Include-Dateien mit Prototypdefinitionen./usr/libBibliothekenModularer Programmcode, welcher von verschiedenen Programmen geteilt wird./usr/localdistributionsunabhängige lokale Hierarchie. Hier kann und soll die lokale Systemadministration Programme und Daten ablegen, die von der entsprechenden <a href="notion://www.notion.so/wiki/Distribution_(Software)">Distribution</a> des jeweiligen Systems unabhängig installiert worden sind, wie etwa selbstkompilierte oder unabhängig von der Distribution heruntergeladene Programme und Dateien. Den Installationsmechanismen der betreffenden Distribution ist es ausdrücklich untersagt, diese Verzeichnisstruktur zu berühren. Die Gestaltung der internen Struktur von /usr/local obliegt der lokalen Systemadministration und ist vom FHS nicht vorgegeben./usr/sbinweitere, nicht zwingend erforderliche SystembefehleDiese Systembefehle werden von dem Administrator im Gegensatz zu /sbin nicht während des Bootvorganges verwendet./usr/share (von der Architektur unabhängige Daten)</p><p id="24d230c1-630a-4ec8-a180-f3e47117b32a" class="">Darüber hinaus können optional die nachfolgenden Verzeichnisse existieren:</p><p id="6ff2cbc2-6536-4151-b481-33dc911a39a7" class="">/usr/X11R6<a href="notion://www.notion.so/wiki/X_Window_System">X Window System</a>, Version 11 Release 6/usr/gamesSpiele/usr/lib&lt;nr&gt;alternative Versionen dynamischer Bibliotheken/usr/srcQuellcode</p><p id="b5337f56-2d00-4a4b-8848-cf2d3da86817" class="">Zur Wahrung der Kompatibilität mit älteren Systemen können symbolische Links für folgende Verzeichnisse angelegt sein:</p><ul id="29a5c71e-52d0-4cd2-8d57-5909467e6203" class="bulleted-list"><li>/usr/spool → /var/spool</li></ul><ul id="10f7dc27-2d20-4a2b-b130-45d9e8a8f082" class="bulleted-list"><li>/usr/tmp → /var/tmp</li></ul><ul id="f2d52b22-517d-4e45-a214-015a21ed0c90" class="bulleted-list"><li>/usr/spool/locks → /var/lock</li></ul><h3 id="6f87cd61-dd7a-4bb9-82df-6bee811040b0" class="">/var-Verzeichnisstruktur[<a href="notion://www.notion.so/w/index.php?title=Filesystem_Hierarchy_Standard&amp;veaction=edit&amp;section=20">Bearbeiten</a> | <a href="notion://www.notion.so/w/index.php?title=Filesystem_Hierarchy_Standard&amp;action=edit&amp;section=20">Quelltext bearbeiten</a>]</h3><p id="5dd0f2c1-6b5c-4353-89dd-198ed953909a" class="">Das /var-Verzeichnis (englisch <strong>var</strong>iable) enthält variable Daten, welche im Zuge der Abarbeitung entstehen. Die folgenden Verzeichnisse, oder symbolische Verknüpfungen zu Verzeichnissen, werden in /var erwartet:</p><p id="9e765b3e-dce3-4151-9d69-b04594ae7d44" class="">/var/cachevon Anwendungsprogrammen zwischengespeicherte Daten/var/libvariable Statusinformationen/var/localvariable Daten im Zusammenhang mit /usr/local/var/lockVerzeichnis für <a href="notion://www.notion.so/wiki/Lock">Lock</a>-Dateien zur Prozesssynchronisation/var/logVerzeichnis für <a href="notion://www.notion.so/wiki/Logdatei">Logdateien</a>/var/optvariable Daten im Zusammenhang mit /opt/var/runDaten, welche für laufende Prozesse Bedeutung haben (mittlerweile erfüllt /run die Funktion; das Verzeichnis besteht, um Kompatibilität mit Systemen und Software zur gewährleisten, die eine ältere Version der FHS-Spezifikation verwenden, und kann als symbolische Verknüpfung auf /run implementiert werden)/var/spoolVerzeichnis für abzuarbeitende Warteschlangen (Druckaufträge, E-Mail-Versandaufträge …)/var/tmp<a href="notion://www.notion.so/wiki/Tempor%C3%A4re_Datei">temporäre Dateien</a>, die über einen Neustart hinweg erhalten bleiben</p><p id="a291d79d-8e11-46ca-b95c-8a32c3429295" class="">Aus „historischen“ Gründen existieren noch bei Bedarf die folgenden Verzeichnisse:</p><ul id="616a27fe-c1e9-4258-9ec3-f6ade4377c76" class="bulleted-list"><li>/var/backups</li></ul><ul id="629c8ab1-fc07-46c7-a28e-af7783358f2a" class="bulleted-list"><li>/var/cron (heutzutage unter /var/spool/cron zu finden)</li></ul><ul id="9d27a416-3e26-4a66-8f25-bc32f85e474f" class="bulleted-list"><li>/var/msgs</li></ul><ul id="b4244631-3a55-4daf-8c9e-f7c1aa006a13" class="bulleted-list"><li>/var/preserve</li></ul><p id="7f54b3ed-c2c5-4472-9bdc-8098ce7c16a8" class="">Falls die entsprechenden Anwendungen installiert sind, werden noch folgende Verzeichnisse verwendet:</p><p id="4766aa2a-192b-452b-831a-2af07c45101b" class="">/var/accountProzessabrechnungsdaten/var/crashSystem<a href="notion://www.notion.so/wiki/Dump">dumps</a> bei Rechnerabstürzen/var/gamesvariable Spieldaten/var/mailBenutzerpostfachdateien (oft als Symlink zu /var/spool/mail)/var/ypDatenbankdateien des <a href="notion://www.notion.so/wiki/Network_Information_Service">Network Information Service</a></p></div></article></body></html>
